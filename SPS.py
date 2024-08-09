@@ -11,7 +11,7 @@ class SPS:
 
     def user_input(self):
         st.write('1 = Stone, 2 = Paper, 3 = Scissor')
-        self.user_choice = st.number_input('Enter your option: ')
+        self.user_choice = st.text_input('Enter your option: ')
 
 
     def sys_out(self):
@@ -22,22 +22,22 @@ class SPS:
     def win(self):
         if self.user_choice == self.system_choice:
             st.write('Tie')
-        elif self.user_choice == 1 and self.system_choice == 2:
+        elif self.user_choice == '1' and self.system_choice == 2:
             st.write('You loss')
             st.write('System Choice is Paper')
-        elif self.user_choice == 2 and self.system_choice == 3:
+        elif self.user_choice == '2' and self.system_choice == 3:
             st.write('You loss')
             st.write('System Choice is Scissor')
-        elif self.user_choice == 3 and self.system_choice == 1:
+        elif self.user_choice == '3' and self.system_choice == 1:
             st.write('You loss')
             st.write('System Choice is Stone')
-        elif self.user_choice == 1 and self.system_choice == 3:
+        elif self.user_choice == '1' and self.system_choice == 3:
             st.write('You win')
             st.write('System Choice is Scissor')
-        elif self.user_choice == 2 and self.system_choice == 1:
+        elif self.user_choice == '2' and self.system_choice == 1:
             st.write('You win')
             st.write('System Choice is Stone')
-        elif self.user_choice == 3 and self.system_choice == 2:
+        elif self.user_choice == '3' and self.system_choice == 2:
             st.write('You win')
             st.write('System Choice is Paper')
 
